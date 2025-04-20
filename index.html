@@ -223,6 +223,16 @@ document.getElementById('date').textContent = `${year}년 ${month}월 ${date}일
 }
 
 updateDate();
+   document.addEventListener("keydown", function (event) {
+    if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "d") {
+      document.body.style.backgroundColor = "#212121";
+      document.body.style.color = "white";
+    }
+   else if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "l") {
+      document.body.style.backgroundColor = "#5BFF7B";
+      document.body.style.color = "black";
+    }
+  });
 </script>
 
 </body>  
